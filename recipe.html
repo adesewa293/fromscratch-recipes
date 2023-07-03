@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="recipe.css">
+</head>
+<body>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <label for="recipe-name">Recipe Name:</label>
+    <input type="text" id="recipe-name" name="recipe-name" required>
+  
+    <label for="recipe-images">Images:</label>
+    <input type="file" id="recipe-images" name="recipe-images[]" multiple accept="image/*">
+  
+    <label for="additional-info">Additional Info:</label>
+    <textarea id="additional-info" name="additional-info"></textarea>
+  
+    <label for="ingredients">Ingredients:</label>
+    <textarea id="ingredients" name="ingredients" required></textarea>
+  
+    <label for="cooking-instructions">Cooking Instructions:</label>
+    <textarea id="cooking-instructions" name="cooking-instructions" required></textarea>
+  
+    <input type="submit" value="Upload">
+  </form>
+  <a href="mainpage.html" class="button-link">Go back</a>
+</body>
+</html>
