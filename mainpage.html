@@ -7,15 +7,22 @@
   <title>Scratch</title>
   <meta name="description" content="fromscratch-recipe" />
   <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mainpage.css" />
 </head>
 <body>
   <header>
     <h1> My Recipes</h1>
-    <a href="index.html"> Go back to Mainpage</a>
-    <a href="recipe.html" class="addNew"> + Add New </a>
+    <div class="mainpage-link">
+      <a class='main-link' href="index.html"> Go back to Mainpage</a>
+    </div>
+    <div class="addNew-link">
+     <a href="recipe.html" class="addNew"> + Add New </a>
+    </div>
+    <div>
+      <a href="About-us.html">ABOUT US</a>
+    </div>
     <form>
-      <input type="search" id="search-input" name="search" placeholder="Search...">
+      <input type="search" id="search-input" name="search" placeholder="Search recipe, people or hashtags">
       <button type="submit">Search</button>
     </form>
     
