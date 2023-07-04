@@ -22,10 +22,10 @@ CookingDetails.prototype.render = function () {
   const ul = document.createElement('ul');
   div.appendChild(ul);
   for (let i = 0; i < this.ingredients.length; i++) {
-    const ingredientList = this.ingredients[i];
+    const ingredientItem = this.ingredients[i];
     const li = document.createElement('li')
     ul.appendChild(li);
-    li.textContent = ingredientList
+    li.textContent = ingredientItem
    } 
 };
 
