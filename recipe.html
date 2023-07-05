@@ -4,28 +4,36 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>scratch</title>
   <link rel="stylesheet" href="recipe.css">
 </head>
 <body>
-  <form action="/upload" method="POST" enctype="multipart/form-data">
-    <label for="recipe-name">Recipe Name:</label>
-    <input type="text" id="recipe-name" name="recipe-name" required>
+  <header>
+    <div>
+      <a href="mainpage.html" class="button-link">Go back</a>
+    </div>
+  </header>
   
-    <label for="recipe-images">Images:</label>
-    <input type="file" id="recipe-images" name="recipe-images[]" multiple accept="image/*">
+  <form id="newRecipe">
+    <label for="recipe-name">Recipe Name:</label>
+    <input type="text" id="recipe-name" name="recipeName" required>
+  
+    <label for="recipe-images">Image URL:</label>
+    <input type="text" id="recipe-images" name="recipeImage">
   
     <label for="additional-info">Additional Info:</label>
-    <textarea id="additional-info" name="additional-info"></textarea>
+    <textarea id="additional-info" name="cookingTime"></textarea>
   
     <label for="ingredients">Ingredients:</label>
     <textarea id="ingredients" name="ingredients" required></textarea>
   
     <label for="cooking-instructions">Cooking Instructions:</label>
-    <textarea id="cooking-instructions" name="cooking-instructions" required></textarea>
+    <textarea id="cooking-instructions" name="cookingInstructions" required></textarea>
   
-    <input type="submit" value="Upload">
+    <input type="submit" value="Submit">
   </form>
-  <a href="mainpage.html" class="button-link">Go back</a>
+ 
+  <script src="app.js"></script>
+  <script src="recipe.js"></script>
 </body>
 </html>

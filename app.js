@@ -1,23 +1,23 @@
 "use strict";
 
-function Recipe(name, cookingTime, imagePath, ingredients = []) {
+const allRecipes = [];
+function Recipe(name, cookingTime, imagePath, ingredients = [], likes = 0) {
   this.name = name;
   this.cookingTime = cookingTime;
   this.ingredients = ingredients;
   this.imagePath = imagePath;
-  this.likes = 0;
-  this.render();
+  this.likes = likes;
+  allRecipes.push(this);
 }
 
 Recipe.prototype.render = function () {
-  const containerElement = document.getElementById("container");
+  const containerElement = document.getElementById("main-page-container");
   const div = document.createElement("div");
   containerElement.appendChild(div);
   const image = document.createElement("img");
   image.classList.add("image");
   image.src = this.imagePath;
   div.appendChild(image);
-  const div2 = document.createElement("div");
   const ul = document.createElement("ul");
   div.appendChild(ul);
   const li3 = document.createElement("li");
@@ -40,7 +40,7 @@ Recipe.prototype.handleButtonClick = function () {
   window.location.href = "cook.html";
 };
 
-function loadRecipes() {
+function createRecipes() {
   const recipe1 = new Recipe(
     "Cooked Coconut Mussels",
     "5 minutes",
@@ -51,7 +51,7 @@ function loadRecipes() {
     "Sauteed Orange and Mustard",
     "5 minutes",
     "images/image2.jpg",
-    ["bread crumbs", "milk", "sugar", "cinnamon", "flour"]
+    ["bread crumbs", "milk", "sugar", "cinnamon", "mayonnaise"]
   );
   const recipe3 = new Recipe(
     "Banana and Mandarin Buns",
@@ -69,19 +69,19 @@ function loadRecipes() {
     "Tenderized hazelnut pheasant",
     "45 minutes",
     "images/image5.jpeg",
-    ["eggs", "milk", "onion", "tomato", "flour"]
+    ["eggs", "milk", "onion", "tomato", "ginger"]
   );
   const recipe6 = new Recipe(
     "White wine toffee",
     "5 minutes",
     "images/image6.jpeg",
-    ["eggs", "vinegar", "lemon", "cinnamon", "flour"]
+    ["eggs", "vinegar", "lemon", "cinnamon", "garlic"]
   );
   const recipe7 = new Recipe(
     "Red wine and mint souffle",
     "5 minutes",
     "images/image20.jpeg",
-    ["eggs", "milk", "soy sauce", "cinnamon", "flour"]
+    ["eggs", "milk", "soy sauce", "cinnamon", "bbq sauce"]
   );
   const recipe8 = new Recipe(
     "Vannilla Pud",
@@ -93,13 +93,13 @@ function loadRecipes() {
     "Cured Vegetables and Mutton",
     "5 minutes",
     "images/image22.jpeg",
-    ["eggs", "mustard", "sugar", "cinnamon", "flour"]
+    ["eggs", "mustard", "sugar", "cinnamon", "cheeese"]
   );
   const recipe10 = new Recipe(
     "Engine-cooked Honey pancakes",
     "5 minutes",
     "images/image23.jpeg",
-    ["eggs", "cream", "sugar", "chicken broth", "flour"]
+    ["eggs", "cream", "sugar", "chicken broth", "salt"]
   );
   const recipe11 = new Recipe(
     "Almond and Saffron bonbons",
@@ -117,20 +117,42 @@ function loadRecipes() {
     "Banana and Mandarin Buns",
     "5 minutes",
     "images/image24.jpeg",
-    ["spices", "milk", "baking soda", "cinnamon", "flour"]
+    ["spices", "milk", "baking soda", "cinnamon", "banana"]
   );
   const recipe14 = new Recipe(
-    "Banana and Mandarin Buns",
+    "Banana and potato porridge",
     "5 minutes",
     "images/image14.jpg",
-    ["permesan cheese", "milk", "sugar", "salted nuts", "flour"]
+    ["permesan cheese", "milk", "sugar", "salted nuts", "potato"]
   );
   const recipe15 = new Recipe(
-    "Banana and Mandarin Buns",
+    "Salmon and veggies",
     "5 minutes",
     "images/image15.jpg",
-    [" baking poder", "milk", "sugar", "unsalted nuts", "flour"]
+    [" baking powder", "milk", "sugar", "unsalted nuts", "cinnamon"]
   );
+}
+function loadRecipes() {
+  const localStoredRecipe = JSON.parse(localStorage.getItem('allRecipes'));
+  console.log('localStoredRecipe', localStoredRecipe);
+  if (localStoredRecipe) {
+    for (let i = 0; i < localStoredRecipe.length; i++) {
+      const recipe = localStoredRecipe[i];
+      new Recipe(recipe.name, recipe.cookingTime, recipe.imagePath, recipe.ingredients, recipe.likes)
+    }
+  } else {
+    createRecipes();
+    localStorage.setItem('allRecipes', JSON.stringify(allRecipes));
+  }
+
+   const containerElement = document.getElementById("main-page-container");
+   if (containerElement){
+    for (let i = 0; i < allRecipes.length; i++) {
+      const recipe = allRecipes[i];
+      recipe.render();
+    }
+  }
+
 }
 
 loadRecipes();

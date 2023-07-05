@@ -10,7 +10,7 @@ function CookingDetails(name, cookingTime, imagePath, likes, ingredients) {
 }
 
 CookingDetails.prototype.render = function () {
-  const mainContainer = document.getElementById("main-container");
+  const mainContainer = document.getElementById("cook-container");
   const div = document.createElement("div");
   mainContainer.appendChild(div);
   const image = document.createElement("img");
