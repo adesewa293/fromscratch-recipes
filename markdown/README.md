@@ -1,10 +1,10 @@
 # fromscratch-recipes
 **The name of the project**
- 'From Scratch' Recipe website
+- 'From Scratch' Recipe website
 
 ***
 Names of the team members
-Adedokun Aishat Adesewa
+- Adedokun Aishat Adesewa
 
 ***
 A description of the project
