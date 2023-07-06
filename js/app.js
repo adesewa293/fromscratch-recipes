@@ -147,6 +147,112 @@ function createRecipes() {
     [" baking powder", "milk", "sugar", "unsalted nuts", "cinnamon"],
     cookingInstruction
   );
+  const recipe16 = new Recipe(
+    "Sandwich",
+    "5",
+    "images/image27.jpeg",
+    ["eggs", "milk", "sugar", "cinnamon", "flour"],
+    cookingInstruction,
+  );
+  const recipe17 = new Recipe(
+    "Pasta",
+    "15",
+    "images/image28.jpeg",
+    ["bread crumbs", "milk", "sugar", "cinnamon", "mayonnaise"],
+    cookingInstruction,
+
+  );
+  const recipe18 = new Recipe(
+    "Shepherd's pie",
+    "25",
+    "images/image29.jpeg",
+    ["salt", "pepper", "sugar", "cinnamon", "banana"],
+    cookingInstruction
+  );
+  const recipe19 = new Recipe(
+    "Shrimp scampi",
+    "55",
+    "images/image30.jpg",
+    ["eggs", "garlic", "sugar", "butter", "flour"],
+    cookingInstruction
+  );
+  const recipe20 = new Recipe(
+    "Fruit salad",
+    "45",
+    "images/image31.jpg",
+    ["eggs", "milk", "onion", "tomato", "ginger"],
+    cookingInstruction
+  );
+  const recipe21 = new Recipe(
+    "Beef stir fry",
+    "5",
+    "images/image32.jpg",
+    ["eggs", "vinegar", "lemon", "cinnamon", "garlic"],
+    cookingInstruction
+  );
+  const recipe22 = new Recipe(
+    "BBQ wings",
+    "25",
+    "images/image33.jpeg",
+    ["eggs", "milk", "soy sauce", "cinnamon", "bbq sauce"],
+    cookingInstruction
+  );
+  const recipe23 = new Recipe(
+    "Claam chowder",
+    "15",
+    "images/image34.jpeg",
+    ["eggs", "milk", "honey", "cinnamon", "flour"],
+    cookingInstruction
+  );
+  const recipe24 = new Recipe(
+    "Chicken tikka masala",
+    "25",
+    "images/image35.jpeg",
+    ["eggs", "mustard", "sugar", "cinnamon", "cheeese"],
+    cookingInstruction
+  );
+  const recipe25 = new Recipe(
+    "Apple pie",
+    "15",
+    "images/image36.jpeg",
+    ["eggs", "cream", "sugar", "chicken broth", "salt"],
+    cookingInstruction
+  );
+  const recipe26 = new Recipe(
+    "Caesar salad",
+    "45",
+    "images/image37.jpeg",
+    ["pasta", "milk", "beef broth", "rice", "flour"],
+    cookingInstruction
+  );
+  const recipe27 = new Recipe(
+    "Cornbreade",
+    "55",
+    "images/potato5.jpg",
+    ["herbs", "milk", "sugar", "cinnamon", "flour"],
+    cookingInstruction
+  );
+  const recipe28 = new Recipe(
+    "Fish tacos",
+    "55",
+    "images/potato6.jpg",
+    ["spices", "milk", "baking soda", "cinnamon", "banana"],
+    cookingInstruction
+  );
+  const recipe29 = new Recipe(
+    "Chicken noodle soup",
+    "25",
+    "images/potato4.jpg",
+    ["permesan cheese", "milk", "sugar", "salted nuts", "potato"],
+    cookingInstruction
+  );
+  const recipe30 = new Recipe(
+    "Lobster bisque",
+    "35",
+    "images/potato3.jpg",
+    [" baking powder", "milk", "sugar", "unsalted nuts", "cinnamon"],
+    cookingInstruction
+  );
 }
 function loadRecipes() {
   const localStoredRecipe = JSON.parse(localStorage.getItem('allRecipes'));

@@ -1,14 +1,14 @@
 label,
-input,
-textarea {
+input {
   display: block;
   margin-bottom: 10px;
+  width: 40%;
   
 }
 .button-link {
   display: inline-block;
   padding: 10px 20px;
-  background-color: brown;
+  background-color: lightcoral;
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
@@ -17,14 +17,31 @@ textarea {
 }
 
 .button-link:hover {
-  background-color: #0056b3;
+  background-color: hotpink;
 }
 body {
   min-height: 100vh;
   background-image: url("../images/mainpageimage.jpeg");
-  background-size: contain;
-  background-repeat: repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 /* header {
 background-color: #94bbe9;
 } */
+.button {
+  background-color: hotpink;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 20%;
+  font-size: 15px;
+}
+.input-box {
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 500px;
+}
