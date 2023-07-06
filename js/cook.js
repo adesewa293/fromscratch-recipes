@@ -1,11 +1,12 @@
 "use strict";
 
-function CookingDetails(name, cookingTime, imagePath, likes, ingredients) {
+function CookingDetails(name, cookingTime, imagePath, cookingInstructions, ingredients, likes) {
   this.name = name;
   this.cookingTime = cookingTime;
   this.imagePath = imagePath;
   this.likes = likes;
   this.ingredients = ingredients;
+  this.cookingInstructions = cookingInstructions
   this.render();
 }
 
@@ -16,9 +17,12 @@ CookingDetails.prototype.render = function () {
   const image = document.createElement("img");
   image.src = this.imagePath;
   div.appendChild(image);
-  const p = document.createElement("p");
+  const p = document.createElement("h1");
   div.appendChild(p);
   p.textContent = this.name;
+  const h2 = document.createElement("h2");
+  div.appendChild(h2);
+  h2.textContent = 'Ingredients';
   const ul = document.createElement('ul');
   div.appendChild(ul);
   for (let i = 0; i < this.ingredients.length; i++) {
@@ -27,6 +31,13 @@ CookingDetails.prototype.render = function () {
     ul.appendChild(li);
     li.textContent = ingredientItem
    } 
+   const h3 = document.createElement("h2");
+  div.appendChild(h3);
+  h3.textContent = 'Cooking Instructions';
+  h3.classList.add('cookinginstruction-element')
+  const p2 = document.createElement('p')
+  div.appendChild(p2)
+  p2.textContent = this.cookingInstructions;
 };
 
 
@@ -40,8 +51,9 @@ function loadCookingDetails() {
     localStoredRecipe.name,
     localStoredRecipe.cookingTime,
     localStoredRecipe.imagePath,
-    localStoredRecipe.likes,
+    localStoredRecipe.cookingInstructions,
     localStoredRecipe.ingredients,
+    localStoredRecipe.likes,
   );
 }
 

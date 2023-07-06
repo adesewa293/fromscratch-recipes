@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>scratch</title>
-  <link rel="stylesheet" href="recipe.css">
+  <link rel="stylesheet" href="css/recipe.css">
 </head>
 <body>
   <header>
@@ -21,19 +21,19 @@
     <label for="recipe-images">Image URL:</label>
     <input type="text" id="recipe-images" name="recipeImage">
   
-    <label for="additional-info">Additional Info:</label>
-    <textarea id="additional-info" name="cookingTime"></textarea>
+    <label for="cooking-time">Cooking Time(minutes):</label>
+    <input type="number" id="cooking-time" name="cookingTime"></textarea>
   
-    <label for="ingredients">Ingredients:</label>
-    <textarea id="ingredients" name="ingredients" required></textarea>
+    <label for="ingredients">Ingredients(separate ingredients with a comma):</label>
+    <input id="ingredients" name="ingredients" required></textarea>
   
     <label for="cooking-instructions">Cooking Instructions:</label>
-    <textarea id="cooking-instructions" name="cookingInstructions" required></textarea>
+    <input id="cooking-instructions" name="cookingInstructions" required></textarea>
   
     <input type="submit" value="Submit">
   </form>
  
-  <script src="app.js"></script>
-  <script src="recipe.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/recipe.js"></script>
 </body>
 </html>

@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body, h1, h2, h3, p, ul, li {
+  font-family: 'Quicksand', sans-serif;
+}
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: lightgray;
+}
+img {
+  width:400px;
+  height: 400px;
+  object-fit: cover;
+  margin: 10px;
+}
+header {
+  background-color: pink;
+  padding: 10px 0;
+  margin-bottom: 10px;
+
+}
+#cook-container {
+  font-family: 'Quicksand', sans-serif ;
+}
+.cooking-header {
+  text-align: center;
+}
+
+.mainpage-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: lightcoral;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin:10px;
+}
+
+.mainpage-link:hover {
+  background-color: hotpink;
+}
+.main-link {
+  text-decoration: none;
+  color: black;
+}
+footer {
+  background-color: hotpink;
+
+}

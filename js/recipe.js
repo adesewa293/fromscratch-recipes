@@ -8,9 +8,7 @@ newRecipe.addEventListener("submit", function (event) {
   const recipeImage = event.target.recipeImage.value;
   const ingredients = event.target.ingredients.value;
   const cookingInstructions = event.target.cookingInstructions.value;
-  
-
-  new Recipe(recipeName, cookingTime, recipeImage,  ingredients, cookingInstructions);
+  new Recipe(recipeName, cookingTime, recipeImage,  ingredients.split(' '), cookingInstructions);
   localStorage.setItem('allRecipes', JSON.stringify(allRecipes));
 
   window.location.href = 'mainpage.html'

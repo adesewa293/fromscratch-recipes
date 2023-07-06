@@ -1,0 +1,121 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+body {
+  line-height: 1.5;
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 20px;
+}
+
+.logo-image {
+  width: auto;
+  height: auto;
+}
+header {
+  background-color: pink;
+  padding: 10px;
+  color: black;
+}
+.header-items {
+  text-align: center;
+}
+.logout-link {
+  text-align: right;
+}
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.button-link:hover {
+  background-color: green;
+}
+
+.button-link:active {
+  background-color: red;
+}
+h1 {
+ 
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.image-container img {
+  width: 30%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 20px;
+}
+
+.image-container img:last-child {
+  margin-right: 0;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: red;
+  text-decoration: none;
+  display: inline-block;
+}
+nav ul li a:hover {
+  color: #000;
+}
+nav ul li a:active {
+  color: #000;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+
+footer {
+  background-color: hotpink;
+  padding: 10px;
+  color: black;
+}
+.featured-link{
+  text-decoration: none;
+}
