@@ -14,13 +14,16 @@ function Recipe(name, cookingTime, imagePath, ingredients, cookingInstructions, 
 Recipe.prototype.render = function () {
   const containerElement = document.getElementById("main-page-container");
   const div = document.createElement("div");
+  div.classList.add('main-div');
   div.addEventListener('click', this.handleButtonClick.bind(this));
   containerElement.appendChild(div);
-  div.classList.add('main-div');
+  const imageSection = document.createElement("div");
+  imageSection.classList.add('image-section');
+  div.appendChild(imageSection);
   const image = document.createElement("img");
   image.classList.add("image");
   image.src = this.imagePath;
-  div.appendChild(image);
+  imageSection.appendChild(image);
   const ul = document.createElement("ul");
   div.appendChild(ul);
   const li3 = document.createElement("li");

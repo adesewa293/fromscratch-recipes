@@ -111,6 +111,15 @@ footer nav ul li {
   cursor: pointer;
   width: 100%;
   font-size: 15px;
+  transition: transform 0.17s;
+}
+.main-div:hover {
+  transform: translateY(-6px);
+}
+
+.image-section img {
+  width: 100%;
+  object-fit: cover;
 }
 
 @media (min-width: 500px) {
