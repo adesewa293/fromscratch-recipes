@@ -11,12 +11,13 @@ function CookingDetails(name, cookingTime, imagePath, cookingInstructions, ingre
 }
 
 CookingDetails.prototype.render = function () {
-  const mainContainer = document.getElementById("cook-container");
-  const div = document.createElement("div");
-  mainContainer.appendChild(div);
+  const div = document.getElementById("cook-container");
   const image = document.createElement("img");
   image.src = this.imagePath;
-  div.appendChild(image);
+  const imageSection = document.createElement("div");
+  imageSection.classList.add('image-section');
+  div.appendChild(imageSection);
+  imageSection.appendChild(image);
   const p = document.createElement("h1");
   div.appendChild(p);
   p.textContent = this.name;
